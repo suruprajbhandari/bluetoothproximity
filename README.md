@@ -39,7 +39,6 @@ Once your virtual environment is active, install the required libraries:
 ```powershell
 pip install -r requirements.txt
 ```
-*(If you don't use requirements.txt, you can manually install them via: `pip install fastapi uvicorn websockets bleak`)*
 
 ---
 
