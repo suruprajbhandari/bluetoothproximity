@@ -32,35 +32,46 @@ python -m venv venv
 
 # Activate it (PowerShell)
 .\venv\Scripts\activate
+```
 
-3. Install Dependencies
+### 3. Install Dependencies
 Once your virtual environment is active, install the required libraries:
-
-powershell
-
-
+```powershell
 pip install -r requirements.txt
-💻 How to Run
-Open your terminal and ensure your virtual environment is activated (.\venv\Scripts\activate).
-Run the FastAPI backend server using Uvicorn:
-powershell
+```
+*(If you don't use requirements.txt, you can manually install them via: `pip install fastapi uvicorn websockets bleak`)*
 
+---
 
+## 💻 How to Run
+
+1. Open your terminal and ensure your virtual environment is activated (`.\venv\Scripts\activate`).
+2. Run the FastAPI backend server using Uvicorn:
+```powershell
 uvicorn app:app --host 0.0.0.0 --port 8000
-Open your web browser and go to: http://localhost:8000
-📱 Finding Your Device
-For iPhone:
+```
+3. Open your web browser and go to: **[http://localhost:8000](http://localhost:8000)**
 
-Ensure your iPhone's Bluetooth is ON.
-Pair your iPhone to your Windows PC via Windows Settings.
-The dashboard is hardcoded with a specific iPhone MAC address in app.py. Note: You will need to replace the IPHONE_MAC variable in app.py with your own iPhone's MAC address!
-For Android / Custom Devices:
+---
 
-Find your Bluetooth MAC address in Settings > About Phone > Status.
-On the ProxiGuard Dashboard, select Custom MAC (Android / Other) and paste the address.
-🛠️ Built With
-Backend: Python, FastAPI, Uvicorn, WebSockets
-Bluetooth: Bleak (Asynchronous Bluetooth Low Energy client)
-OS Control: Windows ctypes API
-Frontend: HTML5, CSS3, JavaScript (Web Audio API)
-Created with ❤️ by Surup Rajbhandari
+## 📱 Finding Your Device
+
+**For iPhone:**
+1. Ensure your iPhone's Bluetooth is ON.
+2. Pair your iPhone to your Windows PC via Windows Settings. 
+3. The dashboard is hardcoded with a specific iPhone MAC address in `app.py`. *Note: You will need to replace the `IPHONE_MAC` variable in `app.py` with your own iPhone's MAC address!*
+
+**For Android / Custom Devices:**
+1. Find your Bluetooth MAC address in `Settings > About Phone > Status`.
+2. On the ProxiGuard Dashboard, select **Custom MAC (Android / Other)** and paste the address.
+
+---
+
+## 🛠️ Built With
+- **Backend:** Python, FastAPI, Uvicorn, WebSockets
+- **Bluetooth:** [Bleak](https://bleak.readthedocs.io/en/latest/) (Asynchronous Bluetooth Low Energy client)
+- **OS Control:** Windows `ctypes` API
+- **Frontend:** HTML5, CSS3, JavaScript (Web Audio API)
+
+---
+*Created with ❤️ by Surup Rajbhandari*
